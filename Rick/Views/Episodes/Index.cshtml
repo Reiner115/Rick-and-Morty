@@ -1,0 +1,26 @@
+﻿
+
+<section class="container p-2">
+    <h2 class="text-center m-5">Rick And Morty Episodes</h2>
+    <div class="row gap-5 justify-content-center">
+
+        @for(int i = 0; i < @ViewBag.Episodes.Count; i++)
+        {
+            Episode episode = @ViewBag.Episodes[i];
+            <a href="https://rickandmortyapi.com/api/episode/1" class="character col-md-3  justify-content-center align-items-center shadow rounded p-4 d-flex flex-column  justify-content-between ">
+                <img src="/images/poster-1.jpg" class="img img-fluid rounded" alt="">
+                
+
+                <h5 class="card-title m-2">@episode.Name</h5>
+                <h6>@episode.EpisodeCode</h6>
+                <h6>@episode.AirDate</h6>
+
+            </a>
+
+        }
+
+
+
+    </div>
+
+</section>
